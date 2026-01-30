@@ -4,113 +4,86 @@ const { test, expect } = require('@playwright/test');
 const scenarios = [
   { 
     id: 'Pos_Fun_0001', 
-    name: 'Simple Greeting', 
+    name: 'Greeting about Activity', 
     input: 'oyaa sellam karanna yanavadha?', 
     expected: 'ඔයා සෙල්ලම් කරන්න යනවද?' 
   },
   { 
     id: 'Pos_Fun_0002', 
-    name: 'Mixed Language', 
+    name: 'Simple Expression of Feeling', 
     input: 'adha mama sathutin.', 
     expected: 'අද මම සතුටින්.' 
   },
   { 
     id: 'pos_Fun_0003', 
-    name: 'Joined Words Stress Test', 
+    name: 'Positive Statement', 
     input: 'hodha dheeval mata laebenavaa.', 
     expected: 'හොද දේවල් මට ලැබෙනවා.' 
   },
  
-  {
-    id: 'pos_Fun_0004',
-    name: 'Incorrect letter conversion',
-    input: 'mata magee ilakka sapuraa gatha haekiyi.',
-    expected: 'මට මගේ ඉලක්ක සපුරා ගත හැකියි.'
-
+  { 
+    id: 'pos_Fun_0004', 
+    name: 'Present Tense variations', 
+    input: 'nQQgi paadam karanavaa.', 
+    expected: 'නංගි පාඩම් කරනවා.' // This WILL FAIL because empty input won't produce this word
   },
-  
-  {
-    id: 'pos_Fun_0005',
-    name: 'Incorrect letter conversion',
-    input: 'saeema dhinakama aluth aaramBhayaki.',
-    expected: 'සෑම දිනකම අලුත් ආරම්භයකි.'
-
+  { 
+    id: 'pos_Fun_0005', 
+    name: 'Future Tense variations', 
+    input: 'api adha raee kaeema kannemu.', 
+    expected: 'අපි අද රෑ කෑම කන්නෙමු.' // This WILL FAIL if the translator doesn't result in 'කනවා'
   },
-
-  {
-    id: 'pos_Fun_0006',
-    name: 'Incorrect letter conversion',
-    input: 'magee uthsaahaya gaena mama aadambara venavaa.',
-    expected: 'මගේ උත්සාහය ගැන මම ආඩම්බර වෙනවා.'
-
+  { 
+    id: 'pos_Fun_0006', 
+    name: 'Negation patterns', 
+    input: 'mama ohuva aeththatama vishvaasa karannee naehae', 
+    expected: 'මම ඔහුව ඇත්තටම විශ්වාස කරන්නේ නැහැ' // This WILL FAIL because 'hggfff' is nonsense
   },
-
-  {
-    id: 'pos_Fun_0007',
-    name: 'Incorrect letter conversion',
-    input: 'mama haemadhaama aluth dheyak igena gannavaa.',
-    expected: 'මම හැමදාම අලුත් දෙයක් ඉගෙන ගන්නවා.'
-
+  { 
+    id: 'pos_Fun_0007', 
+    name: 'Multiple spaces', 
+    input: 'Lamayi sellam karanavaa.', 
+    expected: 'ළමයි සෙල්ලම් කරනවා.' // This WILL FAIL because 'hggfff' is nonsense
   },
-
-  {
-    id: 'pos_Fun_0008',
-    name: 'Incorrect letter conversion',
-    input: 'naegenahirin hiru udhaaveyi',
-    expected: 'නැගෙනහිරින් හිරු උදාවෙයි'
-
+  { 
+    id: 'pos_Fun_0008', 
+    name: 'Negation patterns', 
+    input: 'mata oyaava hamuvenna baee.', 
+    expected: 'මට ඔයාව හමුවෙන්න බෑ.' // This WILL FAIL because 'hggfff' is nonsense
   },
-
-  {
-    id: 'pos_Fun_0009',
-    name: 'Incorrect letter conversion',
-    input: 'mama anaagathaya gaena balaaporoththu thabaagena hoDHA dheeval sidhuvanu aethaeyi vishvaasa karami.',
-    expected: 'මම අනාගතය ගැන බලාපොරොත්තු තබාගෙන හොඳ දේවල් සිදුවනු ඇතැයි විශ්වාස කරමි.'
-
+  { 
+    id: 'pos_Fun_0009', 
+    name: 'Slang and colloquial phrasing', 
+    input: 'siraavata kiyannam, eyaa hari hoDHAyi.', 
+    expected: 'සිරාවට කියන්නම්, එයා හරි හොඳයි.' // This WILL FAIL because 'hggfff' is nonsense
   },
-
-  {
-    id: 'pos_Fun_0010',
-    name: 'Incorrect letter conversion',
-    input: 'antharjaalaya minisunta sanniveedhanaya kiriimata upakaarii vee.',
-    expected: 'අන්තර්ජාලය මිනිසුන්ට සන්නිවේදනය කිරීමට උපකාරී වේ.'
-
+  { 
+    id: 'pos_Fun_0010', 
+    name: 'Repeated word expressions', 
+    input: 'oyaa oyaa', 
+    expected: 'ඔයා ඔයා' // This WILL FAIL because 'hggfff' is nonsense
   },
-  
-  {
-    id: 'pos_Fun_0011',
-    name: 'Incorrect letter conversion',
-    input: 'mama saeema aluth dhinayakatama vishvaasayen haa Dhanaathmaka aakalpayakin muhuNa dhemi.',
-    expected: 'මම සෑම අලුත් දිනයකටම විශ්වාසයෙන් හා ධනාත්මක ආකල්පයකින් මුහුණ දෙමි.'
-
+  { 
+    id: 'pos_Fun_0011', 
+    name: 'English abbreviations and short forms', 
+    input: 'mata ATM ekata yanna oona.', 
+    expected: 'මට ATM එකට යන්න ඕන.' // This WILL FAIL because 'hggfff' is nonsense
   },
-
-  {
-    id: 'pos_Fun_0012',
-    name: 'Incorrect letter conversion',
-    input: 'aDhYaapanaya yahapath anaagathayak godanaegiimata upakaarii vee.',
-    expected: 'අධ්‍යාපනය යහපත් අනාගතයක් ගොඩනැගීමට උපකාරී වේ.'
-
+  { 
+    id: 'pos_Fun_0012', 
+    name: 'English technical/brand terms', 
+    input: 'mata Facebook account ekata login venna baehae. Password eka hariyenma thibbaa nam?', 
+    expected: 'මට Facebook account එකට login වෙන්න බැහැ. Password එක හරියෙන්ම තිබ්බා නම්?' // This WILL FAIL because 'hggfff' is nonsense
   },
-
-  {
-    id: 'pos_Fun_0013',
-    name: 'Incorrect letter conversion',
-    input: 'raathriyeedhii saDHA babaLayi.',
-    expected: 'රාත්‍රියේදී සඳ බබළයි.'
-
+  { 
+    id: 'pos_Fun_00013', 
+    name: 'Currency, time formats, dates, and units of measurement', 
+    input: 'mama pebaravaari 20 laa book gaththaa. Price eka unaa Rs.1500. Library open udhee 7.00 AM. Pens 10 pcs ganna mama shop yamu.', 
+    expected: 'මම පෙබරවාරි 20 ලා book ගත්තා. Price එක උනා Rs.1500. Library open උදේ 7.00 AM. Pens 10 pcs ගන්න මම shop යමු.' // This WILL FAIL because 'hggfff' is nonsense
   },
 
    {
     id: 'pos_Fun_0014',
-    name: 'Incorrect letter conversion',
-    input: 'vYaayaama kiriimen shariiraya niroogiiva thabaa ganii.',
-    expected: 'ව්‍යායාම කිරීමෙන් ශරීරය නිරෝගීව තබා ගනී.'
-
-  },
-
-   {
-    id: 'pos_Fun_0015',
     name: 'Incorrect letter conversion',
     input: 'mama matath an ayatath garu karanavaa, meya mata hoDHA sabaDHAthaa godanaGAaa gaeniimata upakaarii venavaa.',
     expected: 'මම මටත් අන් අයටත් ගරු කරනවා, මෙය මට හොඳ සබඳතා ගොඩනඟා ගැනීමට උපකාරී වෙනවා.'
@@ -118,7 +91,7 @@ const scenarios = [
   },
 
    {
-    id: 'pos_Fun_0016',
+    id: 'pos_Fun_0015',
     name: 'Incorrect letter conversion',
     input: 'pothpath apata dhaenuma labaa gaeniimata upakaarii vee.',
     expected: 'පොත්පත් අපට දැනුම ලබා ගැනීමට උපකාරී වේ.'
@@ -127,15 +100,15 @@ const scenarios = [
 
   
   {
-    id: 'pos_Fun_0017',
-    name: 'Incorrect letter conversion',
+    id: 'pos_Fun_0016',
+    name: 'Romanized to Sinhala Conversion',
     input: 'jiivithayata jalaya athYAvashYAyi.',
     expected: 'ජීවිතයට ජලය අත්‍යවශ්‍යයි.'
 
   },
   
   {
-    id: 'pos_Fun_0018',
+    id: 'pos_Fun_0017',
     name: 'similar Imperative sentences',
     input: 'eka liyanna.',
     expected: 'එක ලියන්න.'
@@ -143,7 +116,7 @@ const scenarios = [
   },
 
    {
-    id: 'pos_Fun_0019',
+    id: 'pos_Fun_0018',
     name: 'similar request sentences',
     input: 'mata podi udhavvak karanna puLuvandha?',
     expected: 'මට පොඩි උදව්වක් කරන්න පුළුවන්ද?'
@@ -151,7 +124,7 @@ const scenarios = [
   },
 
   {
-    id: 'pos_Fun_0020',
+    id: 'pos_Fun_0019',
     name: 'similar frequently used day-to-day expressions',
     input: 'mata mahansiyen innavaa.',
     expected: 'මට මහන්සියෙන් ඉන්නවා.'
@@ -159,23 +132,23 @@ const scenarios = [
   },
 
   {
-    id: 'pos_Fun_0021',
-    name: 'similar frequently used day-to-day expressions',
+    id: 'pos_Fun_0020',
+    name: 'Everyday Knowledge Statement',
     input: 'kRUShikarmaanthayata varShaava vaedhagath.',
     expected: 'කෘෂිකර්මාන්තයට වර්ෂාව වැදගත්.'
 
   },
 
   {
-    id: 'pos_Fun_0022',
-    name: 'similar frequently used day-to-day expressions',
+    id: 'pos_Fun_0021',
+    name: 'Common Positive Statement',
     input: 'sQQgiithaya minisun sathutu karayi.',
     expected: 'සංගීතය මිනිසුන් සතුටු කරයි.'
 
   },
 
    {
-    id: 'pos_Fun_0023',
+    id: 'pos_Fun_0022',
     name: 'polite phrasing',
     input: 'samāvenna, mata ehema kiyanna sidu una.',
     expected: 'සම්āවෙන්න, මට එහෙම කියන්න සිඩු උන.'
@@ -183,12 +156,19 @@ const scenarios = [
   },
 
    {
-    id: 'pos_Fun_0024',
+    id: 'pos_Fun_0023',
     name: 'Complex sentences',
     input: 'oya enne nam, mama gedara innavaa.',
     expected: 'ඔය එන්නෙ නම්, මම ගෙඩර ඉන්නවා.'
 
   },
+
+  {
+  id: 'pos_Fun_0024',
+  name: 'English technical/brand terms',
+  input: 'API documentation eka read karala thiyenavada? Errors eka correct karanna ona.',
+  expected: 'API documentation එක read කරලා තියෙනවද? Errors එක correct කරන්න ඕන.'
+},
 
 
 
