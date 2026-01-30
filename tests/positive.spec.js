@@ -175,7 +175,7 @@ const scenarios = [
   },
 
    {
-    id: 'Neg_Fun_0023',
+    id: 'pos_Fun_0023',
     name: 'similar frequently used day-to-day expressions',
     input: 'sQQgiithaya minisun sathutu karayi.',
     expected: 'සංගීතය මිනිසුන් සතුටු කරයි.'
@@ -183,7 +183,7 @@ const scenarios = [
   },
 
    {
-    id: 'Neg_Fun_0024',
+    id: 'pos_Fun_0024',
     name: 'similar frequently used day-to-day expressions',
     input: 'sQQgiithaya minisun sathutu karayi.',
     expected: 'සංගීතය මිනිසුන් සතුටු කරයි.'
