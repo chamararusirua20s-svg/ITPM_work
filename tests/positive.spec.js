@@ -15,14 +15,14 @@ const scenarios = [
     expected: 'අද මම සතුටින්.' 
   },
   { 
-    id: 'Neg_Fun_0003', 
+    id: 'pos_Fun_0003', 
     name: 'Joined Words Stress Test', 
     input: 'hodha dheeval mata laebenavaa.', 
     expected: 'හොද දේවල් මට ලැබෙනවා.' 
   },
  
   {
-    id: 'Neg_Fun_0004',
+    id: 'pos_Fun_0004',
     name: 'Incorrect letter conversion',
     input: 'mata magee ilakka sapuraa gatha haekiyi.',
     expected: 'මට මගේ ඉලක්ක සපුරා ගත හැකියි.'
@@ -30,7 +30,7 @@ const scenarios = [
   },
   
   {
-    id: 'Neg_Fun_0005',
+    id: 'pos_Fun_0005',
     name: 'Incorrect letter conversion',
     input: 'saeema dhinakama aluth aaramBhayaki.',
     expected: 'සෑම දිනකම අලුත් ආරම්භයකි.'
@@ -38,7 +38,7 @@ const scenarios = [
   },
 
   {
-    id: 'Neg_Fun_0006',
+    id: 'pos_Fun_0006',
     name: 'Incorrect letter conversion',
     input: 'magee uthsaahaya gaena mama aadambara venavaa.',
     expected: 'මගේ උත්සාහය ගැන මම ආඩම්බර වෙනවා.'
@@ -46,7 +46,7 @@ const scenarios = [
   },
 
   {
-    id: 'Neg_Fun_0007',
+    id: 'pos_Fun_0007',
     name: 'Incorrect letter conversion',
     input: 'mama haemadhaama aluth dheyak igena gannavaa.',
     expected: 'මම හැමදාම අලුත් දෙයක් ඉගෙන ගන්නවා.'
@@ -54,7 +54,7 @@ const scenarios = [
   },
 
   {
-    id: 'Neg_Fun_0008',
+    id: 'pos_Fun_0008',
     name: 'Incorrect letter conversion',
     input: 'naegenahirin hiru udhaaveyi',
     expected: 'නැගෙනහිරින් හිරු උදාවෙයි'
@@ -62,7 +62,7 @@ const scenarios = [
   },
 
   {
-    id: 'Neg_Fun_0009',
+    id: 'pos_Fun_0009',
     name: 'Incorrect letter conversion',
     input: 'mama anaagathaya gaena balaaporoththu thabaagena hoDHA dheeval sidhuvanu aethaeyi vishvaasa karami.',
     expected: 'මම අනාගතය ගැන බලාපොරොත්තු තබාගෙන හොඳ දේවල් සිදුවනු ඇතැයි විශ්වාස කරමි.'
@@ -70,7 +70,7 @@ const scenarios = [
   },
 
   {
-    id: 'Neg_Fun_0010',
+    id: 'pos_Fun_0010',
     name: 'Incorrect letter conversion',
     input: 'antharjaalaya minisunta sanniveedhanaya kiriimata upakaarii vee.',
     expected: 'අන්තර්ජාලය මිනිසුන්ට සන්නිවේදනය කිරීමට උපකාරී වේ.'
@@ -78,7 +78,7 @@ const scenarios = [
   },
   
   {
-    id: 'Neg_Fun_0011',
+    id: 'pos_Fun_0011',
     name: 'Incorrect letter conversion',
     input: 'mama saeema aluth dhinayakatama vishvaasayen haa Dhanaathmaka aakalpayakin muhuNa dhemi.',
     expected: 'මම සෑම අලුත් දිනයකටම විශ්වාසයෙන් හා ධනාත්මක ආකල්පයකින් මුහුණ දෙමි.'
@@ -86,7 +86,7 @@ const scenarios = [
   },
 
   {
-    id: 'Neg_Fun_0012',
+    id: 'pos_Fun_0012',
     name: 'Incorrect letter conversion',
     input: 'aDhYaapanaya yahapath anaagathayak godanaegiimata upakaarii vee.',
     expected: 'අධ්‍යාපනය යහපත් අනාගතයක් ගොඩනැගීමට උපකාරී වේ.'
@@ -94,7 +94,7 @@ const scenarios = [
   },
 
   {
-    id: 'Neg_Fun_0013',
+    id: 'pos_Fun_0013',
     name: 'Incorrect letter conversion',
     input: 'raathriyeedhii saDHA babaLayi.',
     expected: 'රාත්‍රියේදී සඳ බබළයි.'
@@ -102,7 +102,7 @@ const scenarios = [
   },
 
    {
-    id: 'Neg_Fun_0014',
+    id: 'pos_Fun_0014',
     name: 'Incorrect letter conversion',
     input: 'vYaayaama kiriimen shariiraya niroogiiva thabaa ganii.',
     expected: 'ව්‍යායාම කිරීමෙන් ශරීරය නිරෝගීව තබා ගනී.'
@@ -110,7 +110,7 @@ const scenarios = [
   },
 
    {
-    id: 'Neg_Fun_0015',
+    id: 'pos_Fun_0015',
     name: 'Incorrect letter conversion',
     input: 'mama matath an ayatath garu karanavaa, meya mata hoDHA sabaDHAthaa godanaGAaa gaeniimata upakaarii venavaa.',
     expected: 'මම මටත් අන් අයටත් ගරු කරනවා, මෙය මට හොඳ සබඳතා ගොඩනඟා ගැනීමට උපකාරී වෙනවා.'
@@ -118,7 +118,7 @@ const scenarios = [
   },
 
    {
-    id: 'Neg_Fun_0016',
+    id: 'pos_Fun_0016',
     name: 'Incorrect letter conversion',
     input: 'pothpath apata dhaenuma labaa gaeniimata upakaarii vee.',
     expected: 'පොත්පත් අපට දැනුම ලබා ගැනීමට උපකාරී වේ.'
@@ -127,7 +127,7 @@ const scenarios = [
 
   
   {
-    id: 'Neg_Fun_0017',
+    id: 'pos_Fun_0017',
     name: 'Incorrect letter conversion',
     input: 'jiivithayata jalaya athYAvashYAyi.',
     expected: 'ජීවිතයට ජලය අත්‍යවශ්‍යයි.'
@@ -135,7 +135,7 @@ const scenarios = [
   },
   
   {
-    id: 'Neg_Fun_0018',
+    id: 'pos_Fun_0018',
     name: 'similar Imperative sentences',
     input: 'eka liyanna.',
     expected: 'එක ලියන්න.'
@@ -143,7 +143,7 @@ const scenarios = [
   },
 
    {
-    id: 'Neg_Fun_0019',
+    id: 'pos_Fun_0019',
     name: 'similar request sentences',
     input: 'mata podi udhavvak karanna puLuvandha?',
     expected: 'මට පොඩි උදව්වක් කරන්න පුළුවන්ද?'
@@ -151,7 +151,7 @@ const scenarios = [
   },
 
   {
-    id: 'Neg_Fun_0020',
+    id: 'pos_Fun_0020',
     name: 'similar frequently used day-to-day expressions',
     input: 'mata mahansiyen innavaa.',
     expected: 'මට මහන්සියෙන් ඉන්නවා.'
@@ -159,7 +159,7 @@ const scenarios = [
   },
 
   {
-    id: 'Neg_Fun_0021',
+    id: 'pos_Fun_0021',
     name: 'similar frequently used day-to-day expressions',
     input: 'kRUShikarmaanthayata varShaava vaedhagath.',
     expected: 'කෘෂිකර්මාන්තයට වර්ෂාව වැදගත්.'
@@ -167,7 +167,7 @@ const scenarios = [
   },
 
   {
-    id: 'Neg_Fun_0022',
+    id: 'pos_Fun_0022',
     name: 'similar frequently used day-to-day expressions',
     input: 'sQQgiithaya minisun sathutu karayi.',
     expected: 'සංගීතය මිනිසුන් සතුටු කරයි.'
@@ -176,17 +176,17 @@ const scenarios = [
 
    {
     id: 'pos_Fun_0023',
-    name: 'similar frequently used day-to-day expressions',
-    input: 'sQQgiithaya minisun sathutu karayi.',
-    expected: 'සංගීතය මිනිසුන් සතුටු කරයි.'
+    name: 'polite phrasing',
+    input: 'samāvenna, mata ehema kiyanna sidu una.',
+    expected: 'සම්āවෙන්න, මට එහෙම කියන්න සිඩු උන.'
 
   },
 
    {
     id: 'pos_Fun_0024',
-    name: 'similar frequently used day-to-day expressions',
-    input: 'sQQgiithaya minisun sathutu karayi.',
-    expected: 'සංගීතය මිනිසුන් සතුටු කරයි.'
+    name: 'Complex sentences',
+    input: 'oya enne nam, mama gedara innavaa.',
+    expected: 'ඔය එන්නෙ නම්, මම ගෙඩර ඉන්නවා.'
 
   },
 
