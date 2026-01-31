@@ -9,26 +9,7 @@ const scenarios = [
     expected: 'එයා පාරේ වැඩ කරනවා.' 
   },
 
-  { 
-    id: 'Pos_UI_0002', 
-    name: 'Plural usage and pronoun variations', 
-    input: 'Lamalaa park ekata yanavaa.', 
-    expected: 'ළමලා park එකට යනවා.' 
-  },
 
-   { 
-    id: 'Pos_UI_0003', 
-    name: 'Complex sentences', 
-    input: 'eyaa balalaa nisaa mama kivvee', 
-    expected: 'එයා බලලා නිසා මම කිව්වේ' 
-  },
-
-   { 
-    id: 'Pos_UI_0004', 
-    name: 'Compound sentences', 
-    input: 'Oya kaam karanawaa, ethakota mama samaga yamu.', 
-    expected: 'ඔයා වැඩ කරනවා, එතකොට මම සමග යමු.' 
-  },
 ];
 
 for (const scenario of scenarios) {

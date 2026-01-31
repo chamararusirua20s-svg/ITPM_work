@@ -5,7 +5,7 @@ const scenarios = [
   { 
     id: 'Neg_Fun_0001', 
     name: 'Present Tense variations', 
-    input: 'nQQgi paadddam karanavaa.', 
+    input: 'nQQgi padam karanavaa.', 
     expected: 'නංගි පාඩම් කරනවා.' // This WILL FAIL because empty input won't produce this word
   },
   { 

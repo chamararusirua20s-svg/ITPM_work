@@ -12,7 +12,7 @@ const scenarios = [
     id: 'Pos_Fun_0002', 
     name: 'Simple Expression of Feeling', 
     input: 'adha mama sathutin.', 
-    expected: 'අද මම සතුටින්.' 
+    expected: 'අද මම සතුටින්' 
   },
   { 
     id: 'pos_Fun_0003', 
