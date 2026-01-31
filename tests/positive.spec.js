@@ -11,8 +11,8 @@ const scenarios = [
   { 
     id: 'Pos_Fun_0002', 
     name: 'Simple Expression of Feeling', 
-    input: 'oyaa sathutindha inne?', 
-    expected: 'ඔයා සතුටින්ද ඉන්නෙ?' 
+    input: 'mata badagini inne.', 
+    expected: 'මට බඩගිනි ඉන්නේ.' 
   },
   { 
     id: 'pos_Fun_0003', 
