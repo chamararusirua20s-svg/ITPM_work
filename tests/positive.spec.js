@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-// You can expand this array to include all 34+ required scenarios
+
 const scenarios = [
   { 
     id: 'Pos_Fun_0001', 
@@ -11,8 +11,8 @@ const scenarios = [
   { 
     id: 'Pos_Fun_0002', 
     name: 'Simple Expression of Feeling', 
-    input: 'adha mama sathutin.', 
-    expected: 'අද මම සතුටින්' 
+    input: 'oyaa sathutindha inne?', 
+    expected: 'ඔයා සතුටින්ද ඉන්නෙ?' 
   },
   { 
     id: 'pos_Fun_0003', 
@@ -25,61 +25,61 @@ const scenarios = [
     id: 'pos_Fun_0004', 
     name: 'Present Tense variations', 
     input: 'nQQgi paadam karanavaa.', 
-    expected: 'නංගි පාඩම් කරනවා.' // This WILL FAIL because empty input won't produce this word
+    expected: 'නංගි පාඩම් කරනවා.' 
   },
   { 
     id: 'pos_Fun_0005', 
     name: 'Future Tense variations', 
     input: 'api adha raee kaeema kannemu.', 
-    expected: 'අපි අද රෑ කෑම කන්නෙමු.' // This WILL FAIL if the translator doesn't result in 'කනවා'
+    expected: 'අපි අද රෑ කෑම කන්නෙමු.' 
   },
   { 
     id: 'pos_Fun_0006', 
     name: 'Negation patterns', 
     input: 'mama ohuva aeththatama vishvaasa karannee naehae', 
-    expected: 'මම ඔහුව ඇත්තටම විශ්වාස කරන්නේ නැහැ' // This WILL FAIL because 'hggfff' is nonsense
+    expected: 'මම ඔහුව ඇත්තටම විශ්වාස කරන්නේ නැහැ' 
   },
   { 
     id: 'pos_Fun_0007', 
     name: 'Multiple spaces', 
     input: 'Lamayi sellam karanavaa.', 
-    expected: 'ළමයි සෙල්ලම් කරනවා.' // This WILL FAIL because 'hggfff' is nonsense
+    expected: 'ළමයි සෙල්ලම් කරනවා.' 
   },
   { 
     id: 'pos_Fun_0008', 
     name: 'Negation patterns', 
     input: 'mata oyaava hamuvenna baee.', 
-    expected: 'මට ඔයාව හමුවෙන්න බෑ.' // This WILL FAIL because 'hggfff' is nonsense
+    expected: 'මට ඔයාව හමුවෙන්න බෑ.' 
   },
   { 
     id: 'pos_Fun_0009', 
     name: 'Slang and colloquial phrasing', 
     input: 'siraavata kiyannam, eyaa hari hoDHAyi.', 
-    expected: 'සිරාවට කියන්නම්, එයා හරි හොඳයි.' // This WILL FAIL because 'hggfff' is nonsense
+    expected: 'සිරාවට කියන්නම්, එයා හරි හොඳයි.' 
   },
   { 
     id: 'pos_Fun_0010', 
     name: 'Repeated word expressions', 
     input: 'oyaa oyaa', 
-    expected: 'ඔයා ඔයා' // This WILL FAIL because 'hggfff' is nonsense
+    expected: 'ඔයා ඔයා' 
   },
   { 
     id: 'pos_Fun_0011', 
     name: 'English abbreviations and short forms', 
     input: 'mata ATM ekata yanna oona.', 
-    expected: 'මට ATM එකට යන්න ඕන.' // This WILL FAIL because 'hggfff' is nonsense
+    expected: 'මට ATM එකට යන්න ඕන.' 
   },
   { 
     id: 'pos_Fun_0012', 
     name: 'English technical/brand terms', 
     input: 'mata Facebook account ekata login venna baehae. Password eka hariyenma thibbaa nam?', 
-    expected: 'මට Facebook account එකට login වෙන්න බැහැ. Password එක හරියෙන්ම තිබ්බා නම්?' // This WILL FAIL because 'hggfff' is nonsense
+    expected: 'මට Facebook account එකට login වෙන්න බැහැ. Password එක හරියෙන්ම තිබ්බා නම්?' 
   },
   { 
     id: 'pos_Fun_00013', 
     name: 'Currency, time formats, dates, and units of measurement', 
     input: 'mama pebaravaari 20 laa book gaththaa. Price eka unaa Rs.1500. Library open udhee 7.00 AM. Pens 10 pcs ganna mama shop yamu.', 
-    expected: 'මම පෙබරවාරි 20 ලා book ගත්තා. Price එක උනා Rs.1500. Library open උදේ 7.00 AM. Pens 10 pcs ගන්න මම shop යමු.' // This WILL FAIL because 'hggfff' is nonsense
+    expected: 'මම පෙබරවාරි 20 ලා book ගත්තා. Price එක උනා Rs.1500. Library open උදේ 7.00 AM. Pens 10 pcs ගන්න මම shop යමු.' 
   },
 
    {
